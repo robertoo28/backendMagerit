@@ -12,11 +12,10 @@ const ActivoSchema = Schema({
     type: String,
     required: true,
   },
-  subCategoria:{
+  subCategoria: {
     type: String,
-    requred:true,
-  }
-  ,
+    requred: true,
+  },
   owner: {
     type: Schema.Types.ObjectId,
     ref: "User",

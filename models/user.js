@@ -1,4 +1,4 @@
-const Activo = require("./activos")
+const Activo = require("./activos");
 const { Schema, model } = require("mongoose");
 const UserSchema = Schema({
   name: {
@@ -8,7 +8,8 @@ const UserSchema = Schema({
   email: {
     type: String,
     required: true,
-  },nick: {
+  },
+  nick: {
     type: String,
     required: true,
   },
@@ -24,13 +25,12 @@ const UserSchema = Schema({
     type: String,
     default: "default.png",
   },
-  activos:[
+  activos: [
     {
       type: Schema.Types.ObjectId,
-      ref:"Activo"
-    }
-  ]
-  ,
+      ref: "Activo",
+    },
+  ],
   created_at: {
     type: Date,
     default: Date.now,
