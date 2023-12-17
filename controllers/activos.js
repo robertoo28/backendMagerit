@@ -6,7 +6,7 @@ const registrarActivo = async (req, res) => {
   try {
     let params = req.body;
     // Verifica si el usuario existe
-    const usuario = await User.findOne({ nick: params.nick });
+    const usuario = await User.findOne({ name: params.name });
     if (!usuario) {
       return res.status(404).send({
         message: "No se encotro Usuario",
@@ -16,7 +16,7 @@ const registrarActivo = async (req, res) => {
 
     // Crea un nuevo activo
     const nuevoActivo = new Activo({
-      name: params.name,
+      nameActive: params.nameActive,
       description: params.description,
       subCategoria: params.subCategoria,
     });

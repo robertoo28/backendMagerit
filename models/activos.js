@@ -4,7 +4,7 @@ const User = require("./user"); // Importa el modelo de Usuario
 // Define el esquema de Activo
 
 const ActivoSchema = Schema({
-  name: {
+  nameActive: {
     type: String,
     required: true,
   },
