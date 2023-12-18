@@ -20,7 +20,6 @@ const ActivoSchema = Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  // Otros campos relacionados con el activo, si los hay.
 });
 
 module.exports = model("Activo", ActivoSchema, "activos");

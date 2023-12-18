@@ -2,13 +2,16 @@ const User = require("../models/user");
 const Activo = require("../models/activos");
 const bcrypt = require("bcrypt");
 const jwt = require("../services/jwt");
+
+//Llamada  de prueba
+
 const prueba = (req, res) => {
   return res.status(200).send({
     messagge: "Mensaje enviado desde usuario",
     usuario: req.user,
   });
 };
-
+//Función para registrar
 const register = async (req, res) => {
   //Recoger datos de la petición
 
@@ -69,6 +72,8 @@ const register = async (req, res) => {
     });
   });
 };
+
+//Función para logear
 const login = (req, res) => {
   //Recoger parametros
   const params = req.body;

@@ -1,5 +1,6 @@
 const Activo = require("./activos");
 const { Schema, model } = require("mongoose");
+// Definir esquema de usuario
 const UserSchema = Schema({
   name: {
     type: String,
