@@ -20,6 +20,19 @@ const ActivoSchema = Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-});
+  integridad:{
+    type: Number,
+  },
+  integridad:{
+    type: Number,
+  },
+  confidencialidad:{
+    type: Number,
+  },
+  disponibilidad:{
+    type: Number,
+  },
+  }
+);
 
 module.exports = model("Activo", ActivoSchema, "activos");

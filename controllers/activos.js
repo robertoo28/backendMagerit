@@ -19,6 +19,9 @@ const registrarActivo = async (req, res) => {
       nameActive: params.nameActive,
       description: params.description,
       subCategoria: params.subCategoria,
+      integridad: params.integridad,
+      disponibilidad: params.disponibilidad,
+      confidencialidad: params.confidencialidad,
     });
     nuevoActivo.save().then(async (activoStored) => {
       if (!activoStored) {
